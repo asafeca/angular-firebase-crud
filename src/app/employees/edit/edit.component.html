@@ -1,0 +1,16 @@
+<h3>Cadastro de funcionarios</h3>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" [(ngModel)]="employee.name"
+        class="form-control" placeholder="employee name">
+
+        <label>Department</label>
+        <input type="text" name="department" [(ngModel)]="employee.department"
+        class="form-control" placeholder="employee name">
+
+    </div>
+
+    <button class="btn btn-primary">Save</button>
+</form>

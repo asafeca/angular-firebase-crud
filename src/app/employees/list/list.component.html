@@ -1,0 +1,22 @@
+<table class="table table-hover table-striped">
+<thead>
+    <th>Name</th>
+    <th>Department</th>
+    <th></th>
+</thead>
+
+<tbody>
+    <tr *ngFor="let employee of employees | async">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.department }}</td>
+
+        <td>
+            <button class="btn btn-info" (click)="edit(employee,employee.key)">Edit</button>
+            <button class="btn btn-danger ml-2" (click)="remove(employee.key)">Remove</button>
+        </td>
+
+    </tr>
+</tbody>
+
+
+</table>
